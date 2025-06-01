@@ -1,8 +1,23 @@
 # 50 Problem Solving Questions and Answers in Python
 
-# 1. Reverse a String
-def reverse_string(s):
-    return s[::-1]
+# 1. Palindrome Check
+def is_palindrome(s):
+    s = s.lower()
+    return s == s[::-1]
+
+word = "Madam"
+if is_palindrome(word):
+    print(f"{word} is a palindrome")
+else:
+    print(f"{word} is not a palindrome")
+
+#shortcut
+import re
+
+def is_palindrome(s):
+    s = re.sub(r'[^a-z0-9]', '', s.lower())
+    return s == s[::-1]
+
 
 # 2. Check if a Number is Prime
 def is_prime(n):
@@ -13,9 +28,17 @@ def is_prime(n):
             return False
     return True
 
-# 3. Palindrome Check
-def is_palindrome(s):
-    return s == s[::-1]
+# 3. Reverse a String
+n = input("Enter a string: ")
+
+def reverse(s):
+    reversed_s = s[::-1]
+    print(f"{s} reversed is {reversed_s}")
+    return reversed_s
+
+reverse(n)
+
+
 
 # 4. First Non-Repeating Character
 def first_non_repeating(s):
@@ -263,7 +286,7 @@ def length_of_longest_substring(s):
 # ------------ Test all functions with examples -------------
 
 if __name__ == "__main__":
-    print("1.", reverse_string("hello"))
+    print("1.", reverse("hello"))
     print("2.", is_prime(7))
     print("3.", is_palindrome("madam"))
     print("4.", first_non_repeating("aabbcde"))

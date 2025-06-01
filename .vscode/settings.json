@@ -1,0 +1,26 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Postgre",
+            "group": "postgre",
+            "database": "demo",
+            "username": "root",
+            "password": ""
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "PG Local",
+            "database": "demodb",
+            "username": "postgres",
+            "password": "As@#",
+            "connectionTimeout": 30
+        }
+    ]
+}
